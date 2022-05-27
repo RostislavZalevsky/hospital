@@ -19,7 +19,12 @@ class LoginController extends Controller
         $user = auth()->user();
 
         $token = $user->createToken($data['email']);
-        return response()->json(['token' => $token->accessToken, 'user' => $user]);
+        return response()->json([
+            'token' => $token->accessToken,
+            'user' => $user,
+            'isDoctor' => $user->isDoctor(),
+            'isPatient' => $user->isPatient(),
+        ]);
     }
 
     public function logout(Request $request)
