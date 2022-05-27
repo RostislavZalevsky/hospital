@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Doctor;
+use App\Models\Patient;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,6 +18,6 @@ class DoctorSeeder extends Seeder
     {
         if (config('app.env') === 'production') return;
 
-        Doctor::factory(50)->create();
+        Doctor::factory(10)->hasAttached(Patient::factory(30))->create();
     }
 }

@@ -17,6 +17,6 @@ class UserSeeder extends Seeder
     {
         if (config('app.env') === 'production') return;
 
-        User::factory(100)->create();
+        User::factory(310)->create();
     }
 }

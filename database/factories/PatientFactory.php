@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,7 +23,7 @@ class PatientFactory extends Factory
             'phone' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(),
             'date_of_birth' => $this->faker->date('Y-m-d', '2000-01-01'),
-            'user_id' => $this->faker->unique()->numberBetween(51, 100)
+            'user_id' => $this->faker->unique()->numberBetween(11, 310)
         ];
     }
 }

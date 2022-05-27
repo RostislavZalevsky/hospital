@@ -18,12 +18,18 @@ class PatientSeeder extends Seeder
     {
         if (config('app.env') === 'production') return;
 
-        Patient::factory(50)->create();
+//        Patient::factory(50)->hasAttached(Doctor::factory())->create();
 
-        $patients = Patient::all();
-
-        foreach ($patients as $patient) {
-            $patient->doctors()->attach(random_int(1, 50));
-        }
+//        $patients = Patient::all();
+//
+//        foreach ($patients as $patient) {
+//            $patient->doctors()->attach(random_int(1, 50));
+//        }
+//
+//        $doctors = Doctor::all();
+//
+//        foreach ($doctors as $doctor) {
+//            $doctor->patients()->attach( randomElement)
+//        }
     }
 }

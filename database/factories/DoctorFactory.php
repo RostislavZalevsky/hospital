@@ -23,7 +23,7 @@ class DoctorFactory extends Factory
             'phone' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(),
             'date_of_birth' => $this->faker->date('Y-m-d', '2000-01-01'),
-            'user_id' => $this->faker->unique()->numberBetween(1, 50)
+            'user_id' => $this->faker->unique()->numberBetween(1, 10)
         ];
     }
 }
